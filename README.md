@@ -1,7 +1,4 @@
 # Project Name Weekend Calculator
-
-
-
 ## TO DO 
 -[] create:
     -[]index.html
