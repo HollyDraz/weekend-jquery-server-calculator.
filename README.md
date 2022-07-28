@@ -1,9 +1,9 @@
 # Project Name Weekend Calculator
 ## TO DO 
--[] create:
-    -[]index.html
-    -[]jquery
-    -client.js
+-[x] create:
+    -[x]index.html
+    -[x]jquery
+    -[x]client.js
 -[] two input areas that allow the user to enter a number 
 -[]buttons for 
     -[]addition

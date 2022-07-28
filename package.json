@@ -4,7 +4,8 @@
   "description": "-[] create:     -[]index.html     -[]jquery     -client.js -[] two input areas that allow the user to enter a number  -[]buttons for      -[]addition     -[]subtraction      -[]multiplication      -[]division      -[]equal      -[]clear  -[]create a div that will display the answer  -[]create a div that displays the calculator history",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js"
   },
   "repository": {
     "type": "git",
