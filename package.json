@@ -1,0 +1,24 @@
+{
+  "name": "weekend-jquery-server-calculator.",
+  "version": "1.0.0",
+  "description": "-[] create:     -[]index.html     -[]jquery     -client.js -[] two input areas that allow the user to enter a number  -[]buttons for      -[]addition     -[]subtraction      -[]multiplication      -[]division      -[]equal      -[]clear  -[]create a div that will display the answer  -[]create a div that displays the calculator history",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HollyWhat/weekend-jquery-server-calculator..git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HollyWhat/weekend-jquery-server-calculator./issues"
+  },
+  "homepage": "https://github.com/HollyWhat/weekend-jquery-server-calculator.#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1"
+  }
+}
