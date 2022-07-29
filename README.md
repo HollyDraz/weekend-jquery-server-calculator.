@@ -4,7 +4,7 @@
     -[x]index.html
     -[x]jquery
     -[x]client.js
--[] two input areas that allow the user to enter a number 
+-[x] two input areas that allow the user to enter a number 
 -[]buttons for 
     -[]addition
     -[]subtraction 
