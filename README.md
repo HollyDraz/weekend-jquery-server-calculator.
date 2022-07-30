@@ -5,18 +5,21 @@
     -[x]jquery
     -[x]client.js
 -[x] two input areas that allow the user to enter a number 
--[]buttons for 
-    -[]addition
-    -[]subtraction 
-    -[]multiplication 
-    -[]division 
-    -[]equal 
-    -[]clear 
--[]create a div that will display the answer 
+-[x]buttons for 
+    -[x]addition
+    -[x]subtraction 
+    -[x]multiplication 
+    -[x]division 
+    -[x]equal 
+    -[x]clear 
+-[x]create a div that will display the answer 
 -[]create a div that displays the calculator history 
 
 ## TO DO: SERVER SIDED
--[] source in the server info 
+-[x] source in the server info 
+-[]first create function that adds the numbers together on click
+    -[]do the same for all other calc. options 
+-[]
 -[] the history of the calculator should be saved even after the page is refreshed 
 -[] note: once the the server is restarted the history may/should be gone 
 
