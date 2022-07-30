@@ -15,11 +15,13 @@
 -[x]create a div that will display the answer 
 -[x]create a div that displays the calculator history 
 
+-[]create an input that uses the data from the modifiers to determine what tha calculator should do(add,subtract,etc)
+
+
 ## TO DO: SERVER SIDED
 -[x] source in the server info 
 -[]first create function that adds the numbers together on click
     -[]do the same for all other calc. options 
--[]
 -[] the history of the calculator should be saved even after the page is refreshed 
 -[] note: once the the server is restarted the history may/should be gone 
 

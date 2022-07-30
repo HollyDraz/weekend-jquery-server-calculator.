@@ -49,27 +49,33 @@ function divide(){
 
 //when i hit equal i want to append my answer and the whole 
 // equation to my DOM 
+// also on click I want to replace whatever I have in the answers 
+//div with the most recent computer calculation
 let MathProblems = [];
-function total (){
 
+
+function total (){
     console.log('total!');
     let equations ={
-        problem: "hello"
+        //swap out plus sign with the modifier
+        problem: $('#first-input').val(),
+        input: 'modifier',
+        second: $('#second-input').val()
+
     }
+    MathProblems.push(equations);
+    console.log(MathProblems);
     console.log(equations);
     $('#problems').append(`
     <ul>
-        <li>${equations.problem}</li>
+        <li>${equations.problem} ${equations.input} ${equations.second}</li>
     </ul>
     `);
-
-
-    
-
 }
 
 
 function clear(){
     console.log('clear!');
     $('#first-input').val('');
+    $('#second-input').val('');
 }
