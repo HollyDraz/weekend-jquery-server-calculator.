@@ -51,12 +51,18 @@ function divide(){
 // equation to my DOM 
 let MathProblems = [];
 function total (){
+
     console.log('total!');
-    
     let equations ={
-        problem: one + two
+        problem: "hello"
     }
     console.log(equations);
+    $('#problems').append(`
+    <ul>
+        <li>${equations.problem}</li>
+    </ul>
+    `);
+
 
     
 
