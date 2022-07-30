@@ -49,8 +49,15 @@ function divide(){
 
 //when i hit equal i want to append my answer and the whole 
 // equation to my DOM 
+let MathProblems = [];
 function total (){
     console.log('total!');
+    
+    let equations ={
+        problem: one + two
+    }
+    console.log(equations);
+
     
 
 }

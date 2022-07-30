@@ -6,6 +6,8 @@ const port = process.env.PORT || 5001;
 app.use(express.urlencoded({extended: true}));
 app.use(express.static('server/public'));
 
+// need a get to grab the info of my calc 
+//and then need it to POST the results and equation on my DOM 
 
 
 
