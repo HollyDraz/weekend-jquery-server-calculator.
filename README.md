@@ -13,7 +13,7 @@
     -[x]equal 
     -[x]clear 
 -[x]create a div that will display the answer 
--[]create a div that displays the calculator history 
+-[x]create a div that displays the calculator history 
 
 ## TO DO: SERVER SIDED
 -[x] source in the server info 
