@@ -52,6 +52,8 @@ function divide(){
 // also on click I want to replace whatever I have in the answers 
 //div with the most recent computer calculation
 let MathProblems = [];
+let result = [];
+let input = [];
 
 
 function total (){
@@ -60,8 +62,8 @@ function total (){
         //swap out plus sign with the modifier
         problem: $('#first-input').val(),
         input: 'modifier',
-        second: $('#second-input').val()
-
+        second: $('#second-input').val(),
+        answer: ''
     }
     MathProblems.push(equations);
     console.log(MathProblems);

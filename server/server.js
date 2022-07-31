@@ -6,10 +6,15 @@ const port = process.env.PORT || 5001;
 app.use(express.urlencoded({extended: true}));
 app.use(express.static('server/public'));
 
-// need a get to grab the info of my calc 
-//and then need it to POST the results and equation on my DOM 
+//history of my math problems 
+let MathProblems = [];
+console.log(MathProblems);
 
+//this gets my math problem history
+app.get('/MathProblems', (req, res) =>{
+    res.send(MathProblems);
 
+} );
 
 
 
