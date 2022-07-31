@@ -7,7 +7,7 @@ function readyNow(){
    $('#multiplication').on('click', multiply);
    $('#division').on('click', divide);
    $('#clear').on('click', clear);
-   $('#equals').on('click', total);
+   $('#equal').on('click', serverAnswer);
 }
 
 
@@ -20,7 +20,6 @@ function add(){
    console.log(one);
    console.log(two);
 }
-
 
 function subtraction(){
     var one = document.getElementById('first-input').value;
@@ -47,33 +46,50 @@ function divide(){
 }
 
 
-//when i hit equal i want to append my answer and the whole 
-// equation to my DOM 
-// also on click I want to replace whatever I have in the answers 
-//div with the most recent computer calculation
-let MathProblems = [];
-let result = [];
-let input = [];
 
-
-function total (){
-    console.log('total!');
-    let equations ={
-        //swap out plus sign with the modifier
-        problem: $('#first-input').val(),
-        input: 'modifier',
-        second: $('#second-input').val(),
-        answer: ''
-    }
-    MathProblems.push(equations);
-    console.log(MathProblems);
-    console.log(equations);
-    $('#problems').append(`
-    <ul>
-        <li>${equations.problem} ${equations.input} ${equations.second}</li>
-    </ul>
-    `);
+function serverAnswer(){
+    $.ajax({
+        type: 'POST',
+        url: '/MathProblems',
+        data: {
+            input: $('#first-input').val(),
+            modifier: currentModifier,
+            xinput: $('#second-input').val()
+        }
+    }).then(function (response){
+        console.log(response);
+    });
 }
+
+let currentModifier = [];
+console.log(currentModifier);
+//function for modifier
+function newMod(){
+    $(this).data("+")
+
+}
+// will create a get for math problem and loop through and append to the dom 
+
+
+
+//function total (){
+   // console.log('total!');
+    //let equations ={
+        //swap out plus sign with the modifier
+       // problem: 
+        //input: "input",
+        //second: 
+        //answer: ''
+    //}
+    //MathProblems.push(equations);
+    //console.log(MathProblems);
+    //console.log(equations);
+    //$('#problems').append(`
+    //<ul>
+     //   <li>${equations.problem} ${equations.input} ${equations.second}</li>
+   // </ul>
+    //`);
+//}
 
 
 function clear(){

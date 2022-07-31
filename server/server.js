@@ -7,14 +7,31 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.static('server/public'));
 
 //history of my math problems 
-let MathProblems = [];
-console.log(MathProblems);
+let mathProblems = [];
+let answer = [];
+
+
+
 
 //this gets my math problem history
-app.get('/MathProblems', (req, res) =>{
-    res.send(MathProblems);
-
+//
+app.get('/mathProblems', (req, res) =>{
+    res.send(mathProblems);
 } );
+
+//function that does the math - results
+app.get( (req, res) => {
+    
+})
+
+
+
+app.post('/MathProblems', (req, res) => {
+    const MathProblems = req.body;
+    console.log(req.body);
+
+
+})
 
 
 
