@@ -12,42 +12,6 @@ function readyNow(){
 }
 
 
-var one;
-var two;
-function add(){
-    console.log("add");
-    var one = document.getElementById('first-input').value;
-    var two = document.getElementById('second-input').value;
-   console.log(one);
-   console.log(two);
-}
-
-function subtraction(){
-    var one = document.getElementById('first-input').value;
-    var two = document.getElementById('second-input').value;
-    console.log(one);
-    console.log(two);
-    console.log("subtraction");
-}
-
-function multiply(){
-    var one = document.getElementById('first-input').value;
-    var two = document.getElementById('second-input').value;
-    console.log(one);
-    console.log(two);
-    console.log('multiplication');
-}
-
-function divide(){
-    var one = document.getElementById('first-input').value;
-    var two = document.getElementById('second-input').value;
-    console.log(one);
-    console.log(two);
-    console.log('division');
-}
-
-
-
 function serverAnswer(){
     $.ajax({
         type: 'POST',
@@ -70,7 +34,77 @@ function newMod(){
     $(this).data("+")
 
 }
-// will create a get for math problem and loop through and append to the dom 
+
+
+
+function postAnswers(){
+    console.log('in post answers');
+    $.ajax({
+        type: 'GET',
+        url: '/answers'
+    }).then(function (response) {
+        for (let i =0; i > response.length; i++){
+            let answer = response[i];
+            console.log(answer);
+            $('#problems').append(`
+            <tr>
+                <td>${mathProblems}</td>
+            </tr>
+            `)
+        }
+    });
+}
+
+var one;
+var two;
+function add(){
+    console.log("add");
+    var one = document.getElementById('first-input').value;
+    var two = document.getElementById('second-input').value;
+   console.log(one);
+   console.log(two);
+}
+
+
+
+
+function subtraction(){
+    var one = document.getElementById('first-input').value;
+    var two = document.getElementById('second-input').value;
+    console.log(one);
+    console.log(two);
+    console.log("subtraction");
+}
+
+function multiply(){
+    var one = document.getElementById('first-input').value;
+    var two = document.getElementById('second-input').value;
+    console.log(one);
+    console.log(two);
+    console.log('multiplication');
+}
+
+
+
+function divide(){
+    var one = document.getElementById('first-input').value;
+    var two = document.getElementById('second-input').value;
+    console.log(one);
+    console.log(two);
+    console.log('division');
+}
+
+
+
+
+
+function clear(){
+    console.log('clear!');
+    $('#first-input').val('');
+    $('#second-input').val('');
+}
+
+// old function I wanted to include to show where my logic started at
 
 
 
@@ -91,28 +125,4 @@ function newMod(){
      //   <li>${equations.problem} ${equations.input} ${equations.second}</li>
    // </ul>
     //`);
-//}
-function postAnswers(){
-    console.log('in post answers');
-    $.ajax({
-        type: 'GET',
-        url: '/answers'
-    }).then(function (response) {
-        for (let i =0; i > response.length; i++){
-            let answer = response[i];
-            console.log(answer);
-            $('#problems').append(`
-            <tr>
-                <td>${mathProblems}</td>
-            </tr>
-            `)
-        }
-    });
-}
 
-
-function clear(){
-    console.log('clear!');
-    $('#first-input').val('');
-    $('#second-input').val('');
-}

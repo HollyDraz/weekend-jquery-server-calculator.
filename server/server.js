@@ -39,13 +39,7 @@ app.get('/answers', (req, res) => {
     mathProblems.push(answer);
     res.sendStatus(201);
     
-})
-
-
-
-
-
-
+});
 
 
 // keep at the bottom 
