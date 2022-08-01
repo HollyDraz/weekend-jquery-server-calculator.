@@ -54,8 +54,6 @@ function getAnswers(){
 }
 
 
-
-
 function add(){
    currentModifier = '+'
 }

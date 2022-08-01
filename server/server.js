@@ -21,10 +21,10 @@ app.post('/mathproblems', (req, res) => {
     if(req.body.modifier === '-'){
         mathProblem.answer= req.body.input - req.body.xinput
     }else if(req.body.modifier === '+'){
-        mathProblem.answer = req.body.input + req.body.xinput
+        mathProblem.answer = Number(req.body.input) + Number(req.body.xinput)
     }else if(req.body.modifier === '*'){
         mathProblem.answer = req.body.input * req.body.xinput
-    }else (req.body.modifier === '/'); {
+    }else if (req.body.modifier === '/'){
         mathProblem.answer = req.body.input / req.body.xinput
     }
     mathProblems.push(mathProblem);
