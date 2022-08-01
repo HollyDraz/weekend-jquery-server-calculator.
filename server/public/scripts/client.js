@@ -57,7 +57,7 @@ function getAnswers(){
 
 
 function add(){
-   currentModifier = "+"
+   currentModifier = '+'
 }
 
 
@@ -66,7 +66,7 @@ function subtraction(){
 }
 
 function multiply(){
-   
+   currentModifier = '*'
 }
 
 
