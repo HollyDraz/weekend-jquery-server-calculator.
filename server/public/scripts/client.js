@@ -72,6 +72,7 @@ function multiply(){
 
 
 function divide(){
+    currentModifier = '/'
     console.log('division');
 }
 

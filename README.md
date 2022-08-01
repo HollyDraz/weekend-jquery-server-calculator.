@@ -19,10 +19,10 @@
 
 ## TO DO: SERVER SIDED
 -[x] source in the server info 
--[]first create function that adds the numbers together on click
-    -[]do the same for all other calc. options 
+-[x]first create function that adds the numbers together on click
+    -[x]do the same for all other calc. options 
 -[x] the history of the calculator should be saved even after the page is refreshed 
--[] note: once the the server is restarted the history may/should be gone 
+-[x] note: once the the server is restarted the history may/should be gone 
 
 ## Stretch Goals:
 -[] edit the interface to appear more like a calculator 
