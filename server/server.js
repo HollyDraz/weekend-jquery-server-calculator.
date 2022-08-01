@@ -30,11 +30,14 @@ app.post('/MathProblems', (req, res) => {
 
 //function that does the math - results
 app.get('/answers', (req, res) => {
-    const answer =req.body;
+    const answer = req.body;
     console.log(req.body);
     console.log(answer);
     //need to then find a way to add the operator to the total
-    mathProblems.total = mathProblems.input - mathProblems.xinput
+    mathProblems.answer = mathProblems.input - mathProblems.xinput
+
+    mathProblems.push(answer);
+    res.sendStatus(201);
     
 })
 

@@ -93,6 +93,7 @@ function newMod(){
     //`);
 //}
 function postAnswers(){
+    console.log('in post answers');
     $.ajax({
         type: 'GET',
         url: '/answers'
@@ -102,11 +103,11 @@ function postAnswers(){
             console.log(answer);
             $('#problems').append(`
             <tr>
-                <td></td>
+                <td>${mathProblems}</td>
             </tr>
             `)
         }
-    })
+    });
 }
 
 
