@@ -18,11 +18,11 @@ app.get('/mathproblems', (req, res) =>{
 app.post('/mathproblems', (req, res) => { 
     const mathProblem = req.body;
     console.log(mathProblem);
-    // TODO: Check operator here with conditionals
-    //create something for input
-    mathProblem.answer = req.body.input; req.body.input; req.body.xinput; 
-    // TODO: Add to history
-    //push to math problems 
+    if(req.body.modifier === '-'){
+        mathProblem.answer= req.body.input - req.body.xinput
+    }else if(req.body.modifier === '+'){
+        mathProblems.answer= req.body.input + req.body.xinput
+    }
     mathProblems.push(mathProblem);
     // Send back current problem with answer
     res.send(mathProblem);
