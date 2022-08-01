@@ -4,7 +4,7 @@
     -[x]index.html
     -[x]jquery
     -[x]client.js
-a pos-[x]buttons for 
+    -[x]buttons for 
     -[x]addition
     -[x]subtraction 
     -[x]multiplication 

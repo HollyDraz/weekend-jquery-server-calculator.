@@ -2,7 +2,7 @@ $(readyNow);
 
 function readyNow(){
     console.log("ready now");
-   $('#addition').on('click', add);
+  // $('#addition').on('click', add);
    $('#subtraction').on('click', subtraction);
    $('#multiplication').on('click', multiply);
    $('#division').on('click', divide);
@@ -11,7 +11,8 @@ function readyNow(){
    getAnswers();
 }
 
-
+let currentModifier = ('');
+console.log(currentModifier);
 function serverAnswer(){
     $.ajax({
         type: 'POST',
@@ -25,14 +26,6 @@ function serverAnswer(){
         console.log(response);
         getAnswers();
     });
-}
-
-let currentModifier = ('');
-console.log(currentModifier);
-//function for modifier
-function newMod(){
-   // $(this).data("+")
-
 }
 
 
@@ -60,13 +53,9 @@ function getAnswers(){
 
 var one;
 var two;
-function add(){
-    console.log("add");
-    var one = document.getElementById('first-input').value;
-    var two = document.getElementById('second-input').value;
-   console.log(one);
-   console.log(two);
-}
+//function add(){
+   //currentModifier = "+"
+//}
 
 
 function subtraction(){
@@ -74,11 +63,7 @@ function subtraction(){
 }
 
 function multiply(){
-    var one = document.getElementById('first-input').value;
-    var two = document.getElementById('second-input').value;
-    console.log(one);
-    console.log(two);
-    console.log('multiplication');
+   
 }
 
 
