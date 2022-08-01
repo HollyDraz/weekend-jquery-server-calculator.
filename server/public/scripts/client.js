@@ -8,6 +8,7 @@ function readyNow(){
    $('#division').on('click', divide);
    $('#clear').on('click', clear);
    $('#equal').on('click', serverAnswer);
+   postAnswers();
 }
 
 
@@ -58,6 +59,7 @@ function serverAnswer(){
         }
     }).then(function (response){
         console.log(response);
+        postAnswers();
     });
 }
 
@@ -90,6 +92,22 @@ function newMod(){
    // </ul>
     //`);
 //}
+function postAnswers(){
+    $.ajax({
+        type: 'GET',
+        url: '/answers'
+    }).then(function (response) {
+        for (let i =0; i > response.length; i++){
+            let answer = response[i];
+            console.log(answer);
+            $('#problems').append(`
+            <tr>
+                <td></td>
+            </tr>
+            `)
+        }
+    })
+}
 
 
 function clear(){
