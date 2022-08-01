@@ -8,14 +8,14 @@ function readyNow(){
    $('#division').on('click', divide);
    $('#clear').on('click', clear);
    $('#equal').on('click', serverAnswer);
-   postAnswers();
+   getAnswers();
 }
 
 
 function serverAnswer(){
     $.ajax({
         type: 'POST',
-        url: '/MathProblems',
+        url: '/mathproblems',
         data: {
             input: $('#first-input').val(),
             modifier: currentModifier,
@@ -23,37 +23,40 @@ function serverAnswer(){
         }
     }).then(function (response){
         console.log(response);
-        postAnswers();
+        getAnswers();
     });
 }
 
-let currentModifier = [];
+let currentModifier = ('');
 console.log(currentModifier);
 //function for modifier
 function newMod(){
-    $(this).data("+")
+   // $(this).data("+")
 
 }
 
 
 
-function postAnswers(){
-    console.log('in post answers');
+function getAnswers(){
+    console.log('in get answers');
     $.ajax({
         type: 'GET',
-        url: '/answers'
+        url: '/mathproblems'
     }).then(function (response) {
-        for (let i =0; i > response.length; i++){
+        console.log(response);
+        for (let i =0; i < response.length; i++){
             let answer = response[i];
             console.log(answer);
             $('#problems').append(`
-            <tr>
-                <td>${mathProblems}</td>
-            </tr>
+            
+                <div>${answer.input} ${answer.modifier} ${answer.xinput} = ${answer.answer}</div>
+           
             `)
         }
     });
 }
+
+
 
 var one;
 var two;
@@ -66,14 +69,8 @@ function add(){
 }
 
 
-
-
 function subtraction(){
-    var one = document.getElementById('first-input').value;
-    var two = document.getElementById('second-input').value;
-    console.log(one);
-    console.log(two);
-    console.log("subtraction");
+    currentModifier = "-";
 }
 
 function multiply(){

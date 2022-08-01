@@ -8,38 +8,30 @@ app.use(express.static('server/public'));
 
 //history of my math problems 
 let mathProblems = [];
-//answer that gets pushed back to the dom 
-let answer = [];
-console.log(answer);
+
+
 
 
 
 //this gets my math problem history
 //
-app.get('/mathProblems', (req, res) =>{
+app.get('/mathproblems', (req, res) =>{
     res.send(mathProblems);
 } );
 
-app.post('/MathProblems', (req, res) => {
-    const mathProblems = req.body;
-    console.log(mathProblems);
-    console.log(req.body);
-
-
-})
-
-//function that does the math - results
-app.get('/answers', (req, res) => {
-    const answer = req.body;
-    console.log(req.body);
-    console.log(answer);
-    //need to then find a way to add the operator to the total
-    mathProblems.answer = mathProblems.input - mathProblems.xinput
-
-    mathProblems.push(answer);
-    res.sendStatus(201);
-    
+app.post('/mathproblems', (req, res) => { 
+    const mathProblem = req.body;
+    console.log(mathProblem);
+    // TODO: Check operator here with conditionals
+    //create something for input
+    mathProblem.answer = req.body.input - req.body.xinput; 
+    // TODO: Add to history
+    //push to math problems 
+    mathProblems.push(mathProblem);
+    // Send back current problem with answer
+    res.send(mathProblem);
 });
+
 
 
 // keep at the bottom 
