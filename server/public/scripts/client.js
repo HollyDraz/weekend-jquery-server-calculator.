@@ -33,6 +33,7 @@ function serverAnswer(){
 
 
 
+mathProblem.answer
 
 function getAnswers(){
     console.log('in get answers');
@@ -45,10 +46,13 @@ function getAnswers(){
             let answer = response[i];
             console.log(answer);
             $('#problems').append(`
-            
-                <div>${answer.input} ${answer.modifier} ${answer.xinput} = ${answer.answer}</div>
-           
+            <ul>
+            <li>${answer.input} ${answer.modifier} ${answer.xinput} = ${answer.answer}</li>
+            </ul>
             `)
+            $('#answer').append(`
+               <h2> ${answer.answer} </h2>
+            `);
         }
     });
 }
