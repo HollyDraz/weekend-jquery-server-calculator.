@@ -24,9 +24,14 @@ function serverAnswer(){
             xinput: $('#second-input').val()
         }
     }).then(function (response){
-        console.log(response);
+        console.log("here is my response", response);
         getAnswers();
-    });
+        console.log("my answer is ", answer);
+        $('#answer').empty();
+        $('#answer').append(`
+         ${response.answer}
+        `)
+    }); 
 }
 
 function getAnswers(){
@@ -36,8 +41,8 @@ function getAnswers(){
         url: '/mathproblems'
     }).then(function (response) {
         $('#problems').empty();
-        console.log(response);
-        for (let i =0; i < response.length; i++){
+        console.log("get answers response is", response);
+        for (let i = 0; i < response.length; i++){
             let answer = response[i];
             console.log(answer);
             $('#problems').append(`
@@ -45,10 +50,12 @@ function getAnswers(){
             <li>${answer.input} ${answer.modifier} ${answer.xinput} = ${answer.answer}</li>
             </ul>
             `)
-        }
-    });
-    
+        
+        }  
+    })
 }
+
+
 
 
 
