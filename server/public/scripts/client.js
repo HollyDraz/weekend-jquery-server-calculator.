@@ -29,18 +29,13 @@ function serverAnswer(){
     });
 }
 
-
-
-
-
-mathProblem.answer
-
 function getAnswers(){
     console.log('in get answers');
     $.ajax({
         type: 'GET',
         url: '/mathproblems'
     }).then(function (response) {
+        $('#problems').empty();
         console.log(response);
         for (let i =0; i < response.length; i++){
             let answer = response[i];
@@ -50,18 +45,18 @@ function getAnswers(){
             <li>${answer.input} ${answer.modifier} ${answer.xinput} = ${answer.answer}</li>
             </ul>
             `)
-            $('#answer').append(`
-               <h2> ${answer.answer} </h2>
-            `);
         }
     });
+    
 }
+
+
+
 
 
 function add(){
    currentModifier = '+'
 }
-
 
 function subtraction(){
     currentModifier = '-';
@@ -71,16 +66,10 @@ function multiply(){
    currentModifier = '*'
 }
 
-
-
 function divide(){
     currentModifier = '/'
     console.log('division');
 }
-
-
-
-
 
 function clear(){
     console.log('clear!');

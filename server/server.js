@@ -30,7 +30,7 @@ app.post('/mathproblems', (req, res) => {
     mathProblems.push(mathProblem);
     // Send back current problem with answer
     res.send(mathProblem);
-});
+})
 
 
 // keep at the bottom 
